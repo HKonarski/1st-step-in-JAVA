@@ -1,104 +1,211 @@
-Aventuras no Reino de
-Java
-Descrição do Jogo
-Olá, aventureiros e programadores! Vamos embarcar em uma jornada mágica pelo
-Reino de Java.
-Neste projeto, você criará seu próprio herói, escolhendo entre as raças Humano e
-Elfo, e as classes Guerreiro e Mago. Sua missão começa na Taverna, onde você
-terá a oportunidade de comprar uma refeição e descobrir uma perigosa missão:
-enfrentar um goblin que está ameaçando as plantações locais!
-Conceitos de Programação Aplicados
-Nesta aventura, vocês aplicarão conceitos conceitos como:
-1. Estruturas Condicionais (if/else/switch): Utilizadas para tomada de decisões
-na criação do personagem e durante o combate
-2. Loops (while, do-while): Controle do sistema de batalha e interações do jogo
-3. Geração de Números Aleatórios: Criação de um sistema de combate
-dinâmico e imprevisível
-4. Entrada de Dados: Interação com o jogador usando Scanner
-5. Variáveis e Tipos de Dados: Armazenamento de atributos do personagem e
-estado do jogo
-Detalhes do Projeto
-O jogador ao iniciar deve criar seu personagem. Todos os personagens começam
-com os seguintes status:
-Vida: 100;
-Força: 10;
-Magia: 10;
-Ouro: 200;
-O sistema deve solicitar:
-Nome:
-Raça: Haverão duas disponíveis, Humano e Elfo;
-Humano: +5 de Força;
-Elfo: +5 de Magia;
-Classe: Haverão duas disponíveis: Guerreiro e Mago;
-Guerreiro: +5 de Força;
-Mago: +5 de Magia;
-Deve ser feita a validação se a entrada de dados do usuário está incorreta, e o
-sistema deve ficar em loop até que o usuário digite a opção correta.
-Após a criação do usuário, o sistema deve imprimir as seguintes mensagens:
-**nomeDoPersonagem** você é um **racaDoPersonagem** **classeDoPersona
-Você é um bravo aventureiro que ao chegar na cidade, ouviu dizer que o taverne
-Sem pensar duas vezes, você vai até sua taverna e encosta no balcão.
-> Jogador: - Boa noite, ouvi dizer que você sabe de uma aventura.
-> Taverneiro: - Posso lhe contar, mas primeiro beba ou coma algo.
-Após isso, deve ser exibido ao usuário o menu da taverna, que consiste em:
-Carne: 12 ouros
-Cerveja: 5 ouros
-O jogador deve obrigatoriamente fazer uma compra antes de avançar para a
-missão. O jogo deve permitir que o usuário faça quantas compras quiser até que
-tenha ouro, ou escolha ir para a missão.
-Ao escolher ver a missão o sistema deve imprimir as seguintes mensagens:
-Existe um goblin terrível acabando com as plantações dos fazendeiros da vila.
-Derrote o goblin e receba 200 moedas de ouro. Você aceita?
-Caso o usuário recuse, o jogo acaba com uma mensagem informativa. Ao aceitar
-a missão o sistema deve imprimir as seguintes mensagens:
-Você começa a caminhar até as terras do interior da vila.
-Em uma das fazendas você encontra o goblin atacando.
-O combate inicia. O sistema deve exibir a vida do jogador e a vida do goblin.
-O jogador pode escolher entre defender e atacar.
-Atacar: O ataque é calculado pelo status principal da classe dividido por 2,
-mais um número inteiro randomico de 1 a 10 (tenham cuidado para evitar o
-0 como random). O resultado do ataque diminui diretamente da vida do
-goblin;
-Ataque Goblin = numero randomico entre 1 e 8 + (forca do goblin / 2);
-Logo a pós o jogador atacar é a vez do goblin.
-O goblin deve possuir os seguintes status:
-Vida: 100;
-Força: 10;
-O goblin vai atacar sempre com força e o calculo é o mesmo:
-Ataque Guerreiro = numero randomico entre 1 e 10 + (forca do personagem
-Ataque Mago = numero randomico entre 1 e 10 + (magia do personagem /
-Defender: Ao escolher a defesa, o sistema vai gerar o ataque do Goblin
-mas dividir pela metade.
-Ao derrotar o goblin, o jogo acaba e o jogador recebe bonus exibidos em tela:
-200 Peças de ouro
-10 de força
-10 de magia
-100 de vida
-Caso o personagem seja derrotado, o jogo acaba com uma mensagem
-motivadora.
-Estrutura de Desenvolvimento
-1. Criação de personagem
-2. Interação na taverna
-3. Sistema de combate
-4. Resultado final (vitória ou derrota)
-Dicas para os Estudantes
-Prestem atenção aos detalhes de implementação
-Entendam como cada estrutura de controle funciona
-Comentem o código para explicar sua lógica
-Desafios Extras
-Para os mais ambiciosos, algumas ideias de expansão:
-Adicionar mais tipos de inimigos
-Implementar um sistema de experiência
-Criar mais opções de compra na taverna
-Adicionar mais ações durante o combate
-Critérios de Avaliação
-Correta implementação da funcionalidade e conceitos de programação
-Clareza e organização do código
-Tratamento de casos de erro e entrada do usuário
-Conclusão
-Este projeto não é apenas um jogo, mas uma jornada de aprendizado. Cada linha
-de código é um passo em sua aventura de programação!
-Lembrem-se: na programação, assim como em uma batalha contra um goblin, a
-persistência e a criatividade são suas maiores armas. Boa sorte, jovens
-programadores! Que o código esteja com vocês! Estejam prontos para uma
-aventura épica no Reino de Java! 🏰🐉🗡💻🧙‍♂️
+# 🏰 Aventuras no Reino de Java
+
+> Um jogo de RPG desenvolvido em Java para praticar lógica de programação, estruturas de controle, validação de entradas e interação com o usuário.
+
+## 📖 Sobre o projeto
+
+**Aventuras no Reino de Java** é um jogo de RPG executado no terminal. Nele, o jogador cria seu próprio herói, visita uma taverna e recebe a missão de enfrentar um goblin que está ameaçando as plantações da vila.
+
+O projeto foi desenvolvido com o objetivo de colocar em prática os fundamentos da linguagem Java por meio de uma experiência interativa.
+
+## 🎮 História
+
+Ao chegar à cidade, o aventureiro descobre que o taverneiro conhece uma missão perigosa. Antes de revelar os detalhes, porém, ele exige que o jogador compre uma refeição ou bebida.
+
+Depois da compra, o jogador poderá aceitar a missão de enfrentar um goblin. Durante o combate, será necessário escolher entre atacar e defender até que um dos personagens seja derrotado.
+
+## 🧙 Criação do personagem
+
+Todos os personagens começam com os seguintes atributos:
+
+| Atributo | Valor inicial |
+|---|---:|
+| Vida | 100 |
+| Força | 10 |
+| Magia | 10 |
+| Ouro | 200 |
+
+O jogador deve informar seu nome e escolher uma raça e uma classe.
+
+### Raças
+
+| Raça | Bônus |
+|---|---|
+| Humano | +5 de Força |
+| Elfo | +5 de Magia |
+
+### Classes
+
+| Classe | Bônus |
+|---|---|
+| Guerreiro | +5 de Força |
+| Mago | +5 de Magia |
+
+As entradas são validadas, e o programa continua solicitando uma opção até que o jogador informe um valor válido.
+
+## 🍖 Taverna
+
+Antes de receber a missão, o jogador precisa comprar pelo menos um item:
+
+| Item | Preço |
+|---|---:|
+| Carne | 12 moedas de ouro |
+| Cerveja | 5 moedas de ouro |
+
+Após a primeira compra, o jogador poderá continuar comprando enquanto possuir ouro ou seguir para a missão.
+
+## ⚔️ Sistema de combate
+
+O goblin possui os seguintes atributos:
+
+| Atributo | Valor |
+|---|---:|
+| Vida | 100 |
+| Força | 10 |
+
+A cada rodada, o jogador escolhe entre duas ações:
+
+- **Atacar:** causa dano com base no atributo principal da classe e em um número aleatório.
+- **Defender:** reduz pela metade o dano causado pelo próximo ataque do goblin.
+
+### Cálculo dos ataques
+
+```text
+Ataque do Guerreiro = número aleatório de 1 a 10 + (força / 2)
+
+Ataque do Mago = número aleatório de 1 a 10 + (magia / 2)
+
+Ataque do Goblin = número aleatório de 1 a 8 + (força / 2)
+```
+
+Depois do ataque do jogador, o goblin realiza seu turno. O combate continua até que a vida do jogador ou do goblin chegue a zero.
+
+## 🏆 Recompensas
+
+Ao derrotar o goblin, o personagem recebe:
+
+| Recompensa | Valor |
+|---|---:|
+| Ouro | +200 |
+| Força | +10 |
+| Magia | +10 |
+| Vida | +100 |
+
+Caso o jogador seja derrotado ou recuse a missão, o jogo é encerrado com uma mensagem correspondente.
+
+## 🧠 Conceitos aplicados
+
+- Variáveis e tipos de dados
+- Estruturas condicionais com `if`, `else` e `switch`
+- Laços de repetição com `while` e `do-while`
+- Entrada de dados com `Scanner`
+- Validação das entradas do usuário
+- Geração de números aleatórios
+- Operadores aritméticos e relacionais
+- Controle do fluxo da aplicação
+- Organização da lógica em diferentes etapas
+
+## 🧩 Etapas do jogo
+
+1. Criação e configuração do personagem
+2. Interação e compras na taverna
+3. Aceitação ou recusa da missão
+4. Combate contra o goblin
+5. Exibição do resultado e das recompensas
+
+## 🛠️ Tecnologias utilizadas
+
+- Java
+- Git
+- GitHub
+
+## ▶️ Como executar
+
+### Pré-requisitos
+
+Para executar o projeto, é necessário ter o **JDK** instalado.
+
+### Execução pelo terminal
+
+1. Clone o repositório:
+
+```bash
+git clone [github.com](https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git)
+```
+
+2. Entre na pasta do projeto:
+
+```bash
+cd SEU-REPOSITORIO
+```
+
+3. Compile o arquivo principal:
+
+```bash
+javac NomeDaClassePrincipal.java
+```
+
+4. Execute o jogo:
+
+```bash
+java NomeDaClassePrincipal
+```
+
+> Substitua `SEU-USUARIO`, `SEU-REPOSITORIO` e `NomeDaClassePrincipal` pelos dados reais do projeto.
+
+## 🚀 Possíveis melhorias
+
+- Adicionar novos inimigos
+- Implementar um sistema de experiência e níveis
+- Criar mais raças e classes
+- Adicionar novas opções de compra na taverna
+- Criar habilidades especiais para cada classe
+- Adicionar poções e equipamentos
+- Implementar novas ações durante o combate
+- Salvar e carregar o progresso do jogador
+
+## 🎯 Objetivo de aprendizagem
+
+Este projeto demonstra a aplicação prática dos fundamentos da linguagem Java, com destaque para **lógica de programação, validação de dados, estruturas de decisão, laços de repetição e interação pelo terminal**.
+
+Além do funcionamento do jogo, o desenvolvimento busca valorizar a clareza, a organização e a legibilidade do código.
+
+---
+
+## 🌎 English
+
+### About the project
+
+**Adventures in the Java Kingdom** is a terminal-based RPG developed to practice Java fundamentals and programming logic.
+
+The player creates a hero by selecting a race and a class, visits a tavern, purchases an item, and receives a mission to defeat a goblin threatening the village's farms.
+
+### Main features
+
+- Character creation
+- Human and Elf races
+- Warrior and Mage classes
+- Attribute and bonus system
+- Tavern purchasing system
+- User input validation
+- Randomized turn-based combat
+- Attack and defense actions
+- Victory rewards
+- Different game outcomes
+
+### Concepts applied
+
+- Variables and data types
+- Conditional statements using `if`, `else`, and `switch`
+- Loops using `while` and `do-while`
+- User input with `Scanner`
+- Input validation
+- Random number generation
+- Arithmetic and relational operators
+- Application flow control
+
+### Learning purpose
+
+This project demonstrates the practical application of Java fundamentals, especially **programming logic, input validation, decision structures, loops, and terminal-based user interaction**.
+
+It also reflects my progress in writing clearer, more organized, and readable code.
